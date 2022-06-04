@@ -1,5 +1,5 @@
 // first way:
-
+//chirag makwana
 // int a[3][4]={{1,2,3,4},{5,6,7,8},{10,11,12,14}};
 
 // second method:
