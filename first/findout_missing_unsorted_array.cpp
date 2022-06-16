@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int find(int a[],int l){
+void find(int a[],int l){
     int h[l]={0,0,0,0,0,0,0,0,0,0};
     for(int i=0;i<l;i++){
         h[a[i]]++;
