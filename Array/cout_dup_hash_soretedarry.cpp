@@ -1,9 +1,11 @@
 #include<iostream>
+#include<vector>
+#include<array>
 using namespace std;
 
-int dup(int a[],int n){
+int dup(vector <int> a,int n){
     int last=a[9];
-    int h[10]={0,0,0,0,0,0,0,0,0,0};
+    vector <int> h(10,0);
     for(int i=0;i<n;i++){
         h[a[i]]++;
     }
@@ -15,7 +17,7 @@ int dup(int a[],int n){
 }
 
 int main(){
-    int a[10]={2,5,2,10,5,6,8,3,3,5};
-    int n=9;
+    vector <int> a ={2,5,2,10,5,6,8,3,3,5};
+    int n=a.size();
     dup(a,n);
 }
