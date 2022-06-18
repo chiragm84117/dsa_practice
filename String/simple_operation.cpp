@@ -37,11 +37,23 @@ void vowels(char a[]){
         if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u'||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='O'){
             vcount++;
         }
-        else if (a[i]>=65 && a[i]<=90 && a[i]>=97 && a[i]<=122){ //to avoid space and special charaters
+        else if ((a[i]>=65 && a[i]<=90) || (a[i]>=97 && a[i]<=122)){ //to avoid space and special charaters
             count++;
         }
     }
     cout<<"no is vowels are "<<vcount<<" and the no of consonents are "<<count<<endl;
+}
+
+void no_words(char b[]){
+    int i,word=0;
+    // there will be space+1 words;
+
+    for(i=0;b[i]!='\0';i++){
+        if(b[i]==' ' && b[i-1]!=' '){ // becouse there should be more than one space so we r cheching whearter pervious b[i-1] has word or space is space there and no leting it in to the if statment
+            word++;
+        }
+    }
+    cout<<"no of words are "<<word+1<<endl;
 }
 
 int main(){
@@ -52,4 +64,5 @@ int main(){
 
     char b[]="my name is chirag";
     vowels(b);
+    no_words(b);
 }
