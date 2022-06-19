@@ -56,6 +56,21 @@ void no_words(char b[]){
     cout<<"no of words are "<<word+1<<endl;
 }
 
+int validating(char a[]){
+    bool flag=true;
+    for(int i=0;a[i]!='\0';i++){
+        if(!(a[i]>=65 && a[i]<=90) && !(a[i]>=97 && a[i]<=122)){
+           flag=false;
+        }        
+    }
+    if(flag==false){
+            cout<<"not a valid string"<<endl;
+        }
+        else{
+            cout<<"valid"<<endl;
+        }
+}
+
 int main(){
     char a[]="welcome";
     length(a);
@@ -65,4 +80,5 @@ int main(){
     char b[]="my name is chirag";
     vowels(b);
     no_words(b);
+    validating(a);
 }

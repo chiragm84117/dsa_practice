@@ -11,6 +11,8 @@ int rotate(int a[],int n){
     
 }
 
+
+
 int main(){
     int n,d;
     cin>>n>>d;
