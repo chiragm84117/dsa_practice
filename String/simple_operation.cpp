@@ -1,4 +1,5 @@
 #include<iostream>
+#include <vector>
 using namespace std;
 void length(char a[]){
     int i;
@@ -87,6 +88,34 @@ void palindrom(char a[],int n){
     }
 }
 
+int anagram(char a[],char b[]){
+    vector <int> h(26,0);
+    int i;
+    for(i=0;a[i]!='\0';i++){
+        h[a[i]-97]+=1;
+    }
+    for( i=0;b[i]!='\0';i++){
+        h[b[i]-97]-=1;
+        if(h[i]<0){
+            cout<<"its is not"<<endl;
+            break;
+        }
+    }
+    int flag=0;
+    for(i=0;i<26;i++){
+        if(h[i]==0){
+            flag=1;
+        }
+        else{
+            flag==0;
+            break;
+        }
+    }
+    if(flag==1){
+        cout<<"it is "<<endl;
+    }
+}
+
 int main(){
     char a[]="welcome";
     length(a);
@@ -99,4 +128,6 @@ int main(){
     validating(a);
     char c[]="madam";
     palindrom(c,4);
+    char d[]="aadmm";
+    anagram(c,d);
 }
