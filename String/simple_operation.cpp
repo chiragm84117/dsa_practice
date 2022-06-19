@@ -71,6 +71,22 @@ int validating(char a[]){
         }
 }
 
+void palindrom(char a[],int n){
+    int j,i,flag=1;
+    for(i=0,j=n;i<j;i++,j--){
+        if(a[i]==a[j]){
+            flag=1;
+        }
+        else{
+            cout<<"it is not"<<endl;
+            break;
+        }
+    }
+    if(flag==1){
+        cout<<"its is "<<endl;
+    }
+}
+
 int main(){
     char a[]="welcome";
     length(a);
@@ -81,4 +97,6 @@ int main(){
     vowels(b);
     no_words(b);
     validating(a);
+    char c[]="madam";
+    palindrom(c,4);
 }
