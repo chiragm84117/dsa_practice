@@ -16,7 +16,8 @@ int count_dup(int a[],int n){
             int j=i+1;
             while(a[i]==a[j])j++;
             cout<<"duplicate no is"<<a[i]<<" it appears "<<j-i<<" times"<<"\n";
-            i=j-1; // this from skiping the element which were duplicate
+            //YOU MAY OR NOT MAY USE IT BUT IF U USE IT COMPUTATION WILL BE MORE EFFECTIVE
+            // i=j-1; // this from skiping the element which were duplicate
         }
     }
 }

@@ -2,7 +2,7 @@
 using namespace std;
 static int lenght;
 int insert(int a[],int i,int val){
-    if(lenght<9){
+    if(lenght<=9){
         for(int j=lenght;j>=i;j--){
             a[j+1]=a[j];
         }

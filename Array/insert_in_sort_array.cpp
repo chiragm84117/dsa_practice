@@ -2,7 +2,7 @@
 using namespace std;
 
 int Sinsert(int a[],int x){
-    int i=4;
+    int i=4; //SIZE OF AN ARRAY
     while(a[i]>x){
         a[i+1]=a[i];
         i--;
