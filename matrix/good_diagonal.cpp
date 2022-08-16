@@ -3,7 +3,7 @@ using namespace std;
 
 struct good_diagonal
 {
-    /* data */
+    
     int A[10];
     int n;
 };
