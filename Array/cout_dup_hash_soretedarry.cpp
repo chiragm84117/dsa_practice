@@ -16,8 +16,18 @@ int dup(vector <int> a,int n){
     }
 }
 
+int hsum(vector <int> a,int n){
+    vector <int> h(10,0);
+    for(int i=0;i<n;i++){
+        h[a[i]]++;
+        if(h[10-a[i]]!=0){
+            cout<<a[i]<<" "<<10-a[i]<<endl;
+        }
+    }
+}
+
 int main(){
     vector <int> a ={2,5,2,10,5,6,8,3,3,5};
     int n=a.size();
-    dup(a,n);
+    hsum(a,n);
 }

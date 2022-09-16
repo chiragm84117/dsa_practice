@@ -1,9 +1,22 @@
-for(;i<5;i++){
-        c[k++]=a[i];
+#include<iostream>
+#include<vector>
+#include<array>
+using namespace std;
+
+int dup(vector <int> a, int n){
+    vector <int> h(10,0);
+    for(int i=0;i<n;i++){
+        h[a[i]]++;
     }
-    for(;j<5;j++){
-        c[k++]=b[j];
+    for(int i=0;i<n;i++){
+        if(h[i]>1){
+        cout<<i<<"  "<<h[i]<<endl;
+        }
     }
-    for(i=0;i<k;i++){
-        cout<<" "<<c[i];
-    }
+}
+
+int main(){
+    vector <int> a={2,5,1,1,4,6,10,4,4,2};
+    int n=a.size();
+    dup(a,n);
+}
