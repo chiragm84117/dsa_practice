@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 int find(int a[],int n){
@@ -19,8 +20,25 @@ int find(int a[],int n){
     }
 }
 
+int findDuplicates(int nums[],int n) {
+        // int n = nums.size();
+        vector <int> hash(n,0);
+        vector <int> ans;
+
+        for(int i=0;i<nums.size();i++){
+            hash[nums[i]]++;
+        }
+        for(int i=0;i<hash.size();i++){
+            if(hash[i]==2){
+                ans.push_back(i);
+            }
+        }
+    return ans;
+    }
+
 int main(){
     int a[10]={3,5,3,6,2,6,3,6,3,5};
     int n=9;
     find(a,n);
+    findDuplicates(int a,int n);
 }

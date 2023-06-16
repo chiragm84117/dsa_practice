@@ -27,7 +27,8 @@ int pow(int x,int n){
     return 1;
     return pow(x,n-1)*x;
 }
-//right one
+
+// right one
 //not getting anwer
 double sin(double x,int n){
     if(n==0){

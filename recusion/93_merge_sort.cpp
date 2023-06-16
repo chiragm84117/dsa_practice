@@ -1,11 +1,11 @@
 #include<iostream>
 using namespace std;
 
-int merge(int a[],int s,int e){
+void merge(int *a,int s,int e){
 
     int mid = (e+s)/2;
 
-    int len1 = mid+s-1;
+    int len1 =mid-s+1;
     int len2 = e-mid;
 
     int* first = new int[len1];
@@ -35,3 +35,42 @@ int merge(int a[],int s,int e){
         else{
             a[mainArrayIndex++] = second[index2++];
         }
+    }
+
+    while(index1<len1){
+        a[mainArrayIndex++] = first[index1++];
+    }
+
+    while(index2<len2){
+        a[mainArrayIndex++] = second[index2++];
+    }
+
+    delete []first;
+    delete []second;
+
+}
+
+void mergeSort(int *a,int s,int e){
+    while(s>=e){
+        return ;
+    }
+
+    int mid = (e+s)/2;
+
+    mergeSort(a,s,mid);
+
+    mergeSort(a,mid+1,e);
+
+    merge(a,s,e);
+}
+
+int main(){
+    int a[15]={5,3,6,2,6,75,2,7,258,2,7,24,97,953,65};
+    int n = 15;
+    mergeSort(a,0,n-1);
+
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+    
+}
